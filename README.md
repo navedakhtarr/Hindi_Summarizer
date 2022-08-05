@@ -25,4 +25,9 @@ To run the applpication first extract the code in your desired computer director
 Run the application app.py by using python command.
 
 
+
 To access the application on the web, use the following url to use the deployed heroku app: https://hindisummary.herokuapp.com 
+
+![123](https://user-images.githubusercontent.com/74537886/183137913-a3ff3d53-7a5a-41d7-8537-5da04b8d21f3.jpg)
+
+![234](https://user-images.githubusercontent.com/74537886/183137926-83bb42bf-08d5-4dd4-bfc0-7904bb4b6421.jpg)
