@@ -20,3 +20,9 @@ The summary was calculated as the 2/3 of the given input by using the nlargest f
 The website was made using Flask. The first webpage takes in the input from user which upon submitting shows result on the second webpage as the original text and the summarised text both in Hindi language.
 The webpage also gives the word count for each.
 
+## Set up and Running
+To run the applpication first extract the code in your desired computer directory. Through this directory open command prompt and activate the virtual environment by navigating to the path: ...\text_summary\venv\Scripts and activate. After that download all the packages through the requirements.txt file. 
+Run the application app.py by using python command.
+
+
+To access the application on the web, use the following url to use the deployed heroku app: https://hindisummary.herokuapp.com 
