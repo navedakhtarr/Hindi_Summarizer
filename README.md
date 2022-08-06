@@ -1,5 +1,6 @@
 # Hindi_Summarizer
 The Machine Learning website takes in Hindi text as input from user and generates a summary for the text in Hindi.
+To access the application on the web, use the following url to use the deployed heroku app: https://hindisummary.herokuapp.com 
 
 ## Work Flow
 The Hindi text is first translated into English by using the python's googletrans module. This corresponding English text is then parsed through various NLP techniques to generate(discussed later)
@@ -28,8 +29,23 @@ To run the applpication first extract the code in your desired computer director
 Run the application app.py by using python command.
 
 
+# AWS 
+1. First an S3 bucket was created on which all the project fiiles were uploaded. 
+2. The bucket Next an AWS service role was created with AmazonS3 Full Access. Custom security rules were created for SSH, HTTP and HTTPS with source tag as 'anywhere' so they can be accessed freely. 
+3. Next a keypair was generated with extension .ppk so it can be opened with PuTTY ffor connecting the SSH. 
+4. Then EC2 instance was launched using with Amazon Linux 2 AMI and the IAM role created earlier was selected along with the security group and keypair made earlier. 5. To run the remote session PuTTY is launched with our IPv4 public IP and the keypair. The apache web server was installed using the command window(see pictures below) and the files from the bucket were downloaded as well. 
 
-To access the application on the web, use the following url to use the deployed heroku app: https://hindisummary.herokuapp.com 
+### Issues
+The only issue this process faces is the next and last step where the service for httpd needs to be started.
+This service failure is recurring even when the service is in Active runnning state.
+The error message displayed is:  "Redirecting to /bin/systemctl status httpd.service"
+
+
+
+![456](https://user-images.githubusercontent.com/74537886/183264201-85feb3fb-dfac-4933-953a-1e789212d4bd.jpg)
+
+
+
 
 ![123](https://user-images.githubusercontent.com/74537886/183137913-a3ff3d53-7a5a-41d7-8537-5da04b8d21f3.jpg)
 
