@@ -11,9 +11,12 @@ The Machine Learning model is then deployed on the web using Flask. The webpage 
 
 
 ## Summariser
-The translated text is processed through Natural Language Processing. The Library used for this purpose is 'spaCy' which is used for removing all the stop words and punctuations present in the text. These operations are carried out withing the defined function. For generating the summary, the first step was to calculate the frequency of all the words which gives the measures of central tendency, dispersion, percentiles, etc. In other words it gives an idea of the most important parts of the text.
+The translated text is processed through Natural Language Processing. The Library used for this purpose is 'spaCy' which is used for removing all the stop words and punctuations present in the text. These operations are carried out withing the defined function. For generating the summary, the first step was to calculate the frequency of all the words which gives the measures of central tendency, dispersion, percentiles, etc. In other words it gives an idea of the most important parts of the text. 
 Next the word with maximum frequency was selected and this frequency was used to normalise all the other word frequencies. 
-Similarly the same operation was done for sentences with the word frequencies and the most important sentences were found.
+Similarly the same operation was done for sentences with the word frequencies and the most important sentences were found. 
+
+Alternatively all of these steps could have been skipped by just using BERT, but this project takes a step by step approach.
+
 The summary was calculated as the 2/3 of the given input by using the nlargest function on the selected sentences, so that the generated summary is grammatically sound and coherent.
 
 ## Deployment
